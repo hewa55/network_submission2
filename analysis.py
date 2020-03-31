@@ -431,7 +431,7 @@ for x in range(len(k)):
         print("There are %s nodes left" % after)
         reduction = 1 - float(after) / before
         print("A reduction to %s percent" % reduction)
-        sns.lineplot(x=["After", "Before"], y=[before / float(before), float(after) / before], ax=axl[x])
+        sns.lineplot(x=["Before", "After"], y=[before / float(before), float(after) / before], ax=axl[x])
         axl[x].set_ylim([0, 1])
         axl[x].set_title(k[x])
     else:
@@ -476,7 +476,7 @@ for x in range(len(k)):
         print(after)
         increase = float(after) / before - 1
         print("An increase of %s percent" % increase)
-        sns.lineplot(x=["After", "Before"], y=[before, after], ax=axl[x])
+        sns.lineplot(x=["Before", "After"], y=[before, after], ax=axl[x])
         axl[x].set_ylim([0, 5])
         axl[x].set_title(k[x])
 
